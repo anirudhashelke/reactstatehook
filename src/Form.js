@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-
-const Form = () => {
+import DataForm from './DataForm'
+const Form = ( ) => {
 
     const [value,setValue] = useState({firstName:"",lastName:"",Email:"",Mobile:"",College:""})
     // console.log(stValue)
@@ -61,18 +61,7 @@ const Form = () => {
         
     </form>
     </div>
-    
-   <div style={{background:"black",width:"300px",margin:"auto",borderRadius:"10px",fontWeight:"bold",color:"red",paddingLeft:"30px",boxSizing:"border-box",lineHeight:"2"}}>
-   <span >First name={data.firstName}</span>
-    <br />
-    <span> last name={data.lastName}</span>
-    <br />
-    <span> Email={data.Email}</span>
-    <br />
-    <span> Mobile NO={data.Mobile}</span>
-    <br />
-    <span> College Name={data.College}</span>
-   </div>
+   <DataForm   {...data} />
     </>
   )
 }
